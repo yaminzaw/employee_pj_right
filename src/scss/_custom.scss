@@ -1,0 +1,135 @@
+// Here you can add other styles
+html:not([dir="rtl"]) .c-sidebar-nav-dropdown-items .c-sidebar-nav-link{
+    padding-left: 15px !important;
+}// Here you can add other styles
+html:not([dir="rtl"]) .c-sidebar-nav-dropdown-items .c-sidebar-nav-link{
+    padding-left: 15px !important;
+}
+.addBtn:hover{
+    -webkit-transform: translateY(-1px);
+	transform: translateY(-3px);
+    background-color: rgb(91, 185, 91);
+}
+.select{
+    margin-bottom: 30px;
+}
+.inputField{
+    margin-bottom: 30px;
+}
+.regCard{
+    background: #1D2B64;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F8CDDA, #1D2B64);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F8CDDA, #1D2B64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.thAddData{
+    border:1px solid;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #90a4ec;
+}
+.tdAddData{
+    border:1px solid;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.tdAddData:nth-child(even) {
+    background-color: #d1d8f1;
+}
+.label{
+    font-size: 17px;
+}
+
+.radioLabel{
+    font-size: 17px;
+    margin-right: 40px;
+}
+.Radio{
+    width: 15px;
+    height: 20px;
+    padding: 20px;
+}
+.regBtn{
+    max-width: 60%;
+    min-width: 40%;
+    height:45px;
+    background-color: #748de7;
+    border-radius: 20px;
+    border:#2d4294;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+}
+.regBtn:hover{
+    -webkit-transform: translateY(-1px);
+	transform: translateY(-3px);
+    background-color: #516bd3;
+    color: white;
+}
+.modalBtn{
+    max-width: 40%;
+    min-width: 15%;
+    height:45px;
+    background-color: #748de7;
+    border-radius: 20px;
+    border:#2d4294;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.modalBtn:hover{
+    -webkit-transform: translateY(-1px);
+	transform: translateY(-3px);
+    background-color: #516bd3;
+    color: white;
+}
+.success {
+    color: white;
+    background-color: #2eb85c;
+    border: 1px solid #2eb85c !important;
+    border-radius: 10px;
+  }
+  .error {
+    color: white;
+    background-color: #e55353;
+    border: 1px solid #e55353 !important;
+    border-radius: 10px;
+  }
+ .okBtn{
+    max-width: 60%;
+    min-width: 50%;
+    height:45px;
+    background-color: #748de7;
+    border-radius: 20px;
+    border:#2d4294;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    margin-bottom: 20px;
+ }
+ .okBtn:hover{
+    -webkit-transform: translateY(-1px);
+	transform: translateY(-3px);
+    background-color: #516bd3;
+    color: white;
+ }
+ .cancelBtn{
+    max-width: 60%;
+    min-width: 50%;
+    height:45px;
+    background-color: rgb(231, 79, 79);
+    border-radius: 20px;
+    border:rgb(235, 51, 51);
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+ }
+ .cancelBtn:hover{
+    -webkit-transform: translateY(-1px);
+	transform: translateY(-3px);
+    background-color: rgb(235, 64, 64);
+    color: white;
+ }

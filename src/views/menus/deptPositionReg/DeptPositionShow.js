@@ -3,7 +3,7 @@
  * @author yaminzaw
  * @create 06/08/2022
  */
- import { CRow,CCol, CLabel,CSelect,CImg} from "@coreui/react";
+ import { CRow,CCol, CLabel,CSelect,CImg,CButton} from "@coreui/react";
  import React from "react";
  
  const DeptPositionShow = (props)=>{
@@ -18,7 +18,10 @@
          deptAddClick,
          deptUpdateClick,
          deptRemoveClick,
-         posAddClick
+         posAddClick,
+         posUpdateClick,
+         posRemoveClick,
+         saveDeptPos
         } = props;
      return(
          <>
@@ -117,15 +120,23 @@
                          <CImg
                              style={{ width: "32px", height: "32px",marginBottom:"20px" }}
                              src={"/avatars/edit.png"}
+                             onClick={posUpdateClick}
                            />
                          </CCol>
                          <CCol lg="1" xs="4">
                          <CImg
                              style={{ width: "32px", height: "32px",marginBottom:"20px" }}
                              src={"/avatars/trash.png"}
+                             onClick={posRemoveClick}
                            />
                          </CCol>
                          <CCol lg="1"></CCol>
+                     </CRow>
+                     <CRow>
+                         <CCol lg="4"></CCol>
+                         <CCol lg="2">
+                            <CButton className="okBtn" onClick={saveDeptPos} >Save</CButton>
+                         </CCol>
                      </CRow>
                  </CCol>
                  <CCol lg="1"></CCol>

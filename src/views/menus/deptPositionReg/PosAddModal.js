@@ -1,3 +1,8 @@
+/**
+ * Position Add Modal
+ * @author yaminzaw
+ * @create 06/08/2022
+ */
 import React from "react";
 import {
     CRow,
@@ -10,9 +15,9 @@ import {
     CCol,
     CLabel
 } from "@coreui/react";
-
+import SuccessError from "../../common/SuccessError";
 const PosAddModal = (props) =>{
-    const { show, addPosClose,handleAddPos,addPos,addPosOk} = props;
+    const { show, addPosClose,handleAddPos,addPos,addPosOk,errAddPos,successAddPos} = props;
   return (
     <>
       <CModal
@@ -30,6 +35,9 @@ const PosAddModal = (props) =>{
           </span>
         </CModalHeader>
         <CModalBody>
+          <CRow style={{marginBottom:"30px",justifyContent:"center"}}>
+            <SuccessError error={errAddPos} success={successAddPos} />
+          </CRow>
           <CRow>
               <CCol lg="2"></CCol>
               <CCol lg="3">
@@ -47,14 +55,14 @@ const PosAddModal = (props) =>{
               <CCol lg="2"></CCol>
           </CRow>
           <CButtonToolbar  style={{marginBottom:"30px"}}>
-              <CCol lg="3"></CCol>
-              <CCol lg="3">
+              <CCol lg="4"></CCol>
+              <CCol lg="2">
                 <CButton className="okBtn" onClick={addPosOk}>Add</CButton>
               </CCol>
-              <CCol lg="3">
+              <CCol lg="2">
                 <CButton className="cancelBtn" onClick={addPosClose}>Close</CButton>
               </CCol>
-              <CCol lg="3"></CCol> 
+              <CCol lg="4"></CCol> 
           </CButtonToolbar>
         </CModalBody>
       </CModal>

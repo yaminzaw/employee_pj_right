@@ -1,5 +1,5 @@
 /**
- * Department Update Modal
+ * Position Update Modal
  * @author yaminzaw
  * @create 06/08/2022
  */
@@ -17,18 +17,18 @@ import {
     CSelect
   } from "@coreui/react";
 import SuccessError from "../../common/SuccessError";
-const DeptUpdateModal = (props) =>{
+const PosUpdateModal = (props) =>{
     const { 
         show,
-        handleUpdateDept,
-        updateDeptOk,
-        updateDeptClose,
-        updateDept,
-        deptData,
-        chooseDeptUpdate,
-        selectDeptUpdate,
-        errUpdateDept,
-        successUpdateDept
+        handleUpdatePos,
+        updatePosOk,
+        updatePosClose,
+        updatePos,
+        positionData,
+        choosePosUpdate,
+        selectPosUpdate,
+        successUpdatePos,
+        errUpdatePos
     } = props;
   return (
     <>
@@ -42,27 +42,27 @@ const DeptUpdateModal = (props) =>{
         <CModalHeader>
           <span>
             <h5 style={{ fontWeight: "bold", marginLeft: "20px" }}>
-              Update Department
+              Update Position
             </h5>
           </span>
         </CModalHeader>
         <CModalBody>
-        <CRow style={{marginBottom:"30px",justifyContent:"center"}}>
-            <SuccessError error={errUpdateDept} success={successUpdateDept} />
+          <CRow style={{marginBottom:"30px",justifyContent:"center"}}>
+            <SuccessError error={errUpdatePos} success={successUpdatePos} />
           </CRow>
           <CRow>
               <CCol lg="2"></CCol>
               <CCol lg="4">
-                <CLabel className="label">Department Name</CLabel>
+                <CLabel className="label">Position Name</CLabel>
               </CCol>
               <CCol lg="4">
               <CSelect
                  className="select"
-                 value={chooseDeptUpdate}
-                 onChange={selectDeptUpdate}
+                 value={choosePosUpdate}
+                 onChange={selectPosUpdate}
                >
-                 <option value="">---Select Department---</option>
-                 {deptData.map((data, index) => {
+                 <option value="">---Select position---</option>
+                 {positionData.map((data, index) => {
                    return (
                      <option
                        className="option"
@@ -81,15 +81,15 @@ const DeptUpdateModal = (props) =>{
           <CRow>
               <CCol lg="2"></CCol>
               <CCol lg="4">
-                <CLabel className="label">Update Department Name</CLabel>
+                <CLabel className="label">Update Position Name</CLabel>
               </CCol>
               <CCol lg="4">
               <CInput
                     className="inputField"
                     placeholder="Please Enter Department"
                     type="text"
-                    value={updateDept}
-                    onChange={(e) => handleUpdateDept(e)}
+                    value={updatePos}
+                    onChange={(e) => handleUpdatePos(e)}
                 />
               </CCol>
               <CCol lg="2"></CCol>
@@ -97,10 +97,10 @@ const DeptUpdateModal = (props) =>{
           <CButtonToolbar  style={{marginBottom:"30px"}}>
               <CCol lg="4"></CCol>
               <CCol lg="2">
-                <CButton className="okBtn" onClick={updateDeptOk}>Update</CButton>
+                <CButton className="okBtn" onClick={updatePosOk}>Update</CButton>
               </CCol>
               <CCol lg="2">
-                <CButton className="cancelBtn" onClick={updateDeptClose}>Close</CButton>
+                <CButton className="cancelBtn" onClick={updatePosClose}>Close</CButton>
               </CCol>
               <CCol lg="4"></CCol> 
           </CButtonToolbar>
@@ -112,4 +112,4 @@ const DeptUpdateModal = (props) =>{
   )
 }
 
-export default DeptUpdateModal;
+export default PosUpdateModal;

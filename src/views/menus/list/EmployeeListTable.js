@@ -47,52 +47,52 @@ const EmployeeListTable = (props) => {
                 <thead style={{ backgroundColor: "#90a4ec" }}>
                   <tr>
                     <th
-                      style={{ border: "1px solid", verticalAlign: "middle" }}
+                      style={{  verticalAlign: "middle" }}
                       rowSpan="2"
                     >
                       No
                     </th>
                     <th
-                      style={{ border: "1px solid", verticalAlign: "middle" }}
+                      style={{verticalAlign: "middle" }}
                       rowSpan="2"
                     >
                       ID
                     </th>
                     <th
-                      style={{ border: "1px solid", verticalAlign: "middle" }}
+                      style={{ verticalAlign: "middle" }}
                       rowSpan="2"
                     >
                       Name
                     </th>
                     <th
-                      style={{ border: "1px solid", verticalAlign: "middle" }}
+                      style={{ verticalAlign: "middle" }}
                       rowSpan="2"
                     >
                       Email
                     </th>
                     <th
-                      style={{ border: "1px solid", verticalAlign: "middle" }}
+                      style={{verticalAlign: "middle" }}
                       rowSpan="2"
                     >
                       Department
                     </th>
                     <th
-                      style={{ border: "1px solid", verticalAlign: "middle" }}
+                      style={{ verticalAlign: "middle" }}
                       rowSpan="2"
                     >
                       Position
                     </th>
                     <th
-                      style={{ border: "1px solid", verticalAlign: "middle" }}
+                      style={{verticalAlign: "middle" }}
                       colSpan={3}
                     >
                       Action
                     </th>
                   </tr>
-                  <tr>
-                    <th style={{ border: "1px solid" }}>Edit</th>
-                    <th style={{ border: "1px solid" }}>Detail</th>
-                    <th style={{ border: "1px solid", textAlign: "center" }}>
+                  <tr >
+                    <th style={{borderTop:"1px solid #ffffff"}} >Edit</th>
+                    <th style={{borderTop:"1px solid #ffffff"}}>Detail</th>
+                    <th style={{ borderTop:"1px solid #ffffff",textAlign: "center" }}>
                       Delete
                     </th>
                   </tr>
@@ -101,31 +101,31 @@ const EmployeeListTable = (props) => {
                   {UserData.map((data, index) => {
                     return (
                       <tr key={index}>
-                        <td style={{ border: "1px solid" }}>{data.id}</td>
-                        <td style={{ border: "1px solid" }}>
+                        <td >{data.id}</td>
+                        <td >
                           {data.student_id}
                         </td>
-                        <td style={{ border: "1px solid" }}>
+                        <td>
                           {data.student_name}
                         </td>
-                        <td style={{ border: "1px solid" }}>{data.email}</td>
-                        <td style={{ border: "1px solid" }}>{data.career}</td>
-                        <td style={{ border: "1px solid" }}>{data.phone}</td>
-                        <td style={{ border: "1px solid" }}>
+                        <td >{data.email}</td>
+                        <td >{data.career}</td>
+                        <td >{data.phone}</td>
+                        <td >
                           <CImg
                             style={{ width: "32px", height: "32px" }}
                             src={"/avatars/edit.png"}
                             onClick={()=>editBtn(data)}
                           />
                         </td>
-                        <td style={{ border: "1px solid" }}>
+                        <td>
                           <CImg
                             style={{ width: "32px", height: "32px" }}
                             src={"/avatars/detail.png"}
                             onClick={()=>detailBtn(data)}
                           />
                         </td>
-                        <td style={{ border: "1px solid" }}>
+                        <td >
                           <CImg
                             style={{ width: "32px", height: "32px" }}
                             src={"/avatars/trash.png"}

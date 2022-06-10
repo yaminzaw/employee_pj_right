@@ -1,5 +1,5 @@
 /**
- * Department Remove Modal
+ * Position Remove Modal
  * @author yaminzaw
  * @create 06/08/2022
  */
@@ -16,8 +16,8 @@ import {
     CLabel
   } from "@coreui/react";
 import SuccessError from "../../common/SuccessError";
-const DeptRemoveModal = (props) =>{
-    const { show, removeDeptClose,chooseRemoveDept,selectRemoveDept,removeDeptOk,deptData,errRemoveDept,successRemoveDept} = props;
+const PosRemoveModal = (props) =>{
+    const { show, removePosClose,chooseRemovePos,selectRemovePos,removePosOk,positionData,successRemovePos,errRemovePos} = props;
     return (
       <>
         <CModal
@@ -30,27 +30,27 @@ const DeptRemoveModal = (props) =>{
           <CModalHeader>
             <span>
               <h5 style={{ fontWeight: "bold", marginLeft: "20px" }}>
-                Remove Department
+                Remove Position
               </h5>
             </span>
           </CModalHeader>
           <CModalBody>
-          <CRow style={{marginBottom:"30px",justifyContent:"center"}}>
-            <SuccessError error={errRemoveDept} success={successRemoveDept} />
-          </CRow>
+            <CRow style={{marginBottom:"30px",justifyContent:"center"}}>
+              <SuccessError error={errRemovePos} success={successRemovePos} />
+            </CRow>
             <CRow>
                 <CCol lg="2"></CCol>
                 <CCol lg="3">
-                  <CLabel className="label">Department Name</CLabel>
+                  <CLabel className="label">Position Name</CLabel>
                 </CCol>
                 <CCol lg="4">
                 <CSelect
                  className="select"
-                 value={chooseRemoveDept}
-                 onChange={selectRemoveDept}
+                 value={chooseRemovePos}
+                 onChange={selectRemovePos}
                >
-                 <option value="">---Select Department---</option>
-                 {deptData.map((data, index) => {
+                 <option value="">---Select Position---</option>
+                 {positionData.map((data, index) => {
                    return (
                      <option
                        className="option"
@@ -69,10 +69,10 @@ const DeptRemoveModal = (props) =>{
             <CButtonToolbar  style={{marginBottom:"30px"}}>
                 <CCol lg="4"></CCol>
                 <CCol lg="2">
-                  <CButton className="okBtn" onClick={removeDeptOk}>Remove</CButton>
+                  <CButton className="okBtn" onClick={removePosOk}>Remove</CButton>
                 </CCol>
                 <CCol lg="2">
-                  <CButton className="cancelBtn" onClick={removeDeptClose}>Close</CButton>
+                  <CButton className="cancelBtn" onClick={removePosClose}>Close</CButton>
                 </CCol>
                 <CCol lg="4"></CCol> 
             </CButtonToolbar>
@@ -84,4 +84,4 @@ const DeptRemoveModal = (props) =>{
     )
 }
 
-export default DeptRemoveModal;
+export default PosRemoveModal;

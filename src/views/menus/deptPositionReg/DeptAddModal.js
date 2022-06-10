@@ -1,3 +1,8 @@
+/**
+ * Department Add Modal
+ * @author yaminzaw
+ * @create 06/08/2022
+ */
 import React from "react";
 import {
     CRow,
@@ -10,8 +15,9 @@ import {
     CCol,
     CLabel
   } from "@coreui/react";
+import SuccessError from "../../common/SuccessError";
 const DeptAddModal = (props) =>{
-  const { show, addDeptClose,handleAddDept,addDept,addDeptOk} = props;
+  const { show, addDeptClose,handleAddDept,addDept,addDeptOk,errAddDept,successAddDept} = props;
   return (
     <>
       <CModal
@@ -29,6 +35,9 @@ const DeptAddModal = (props) =>{
           </span>
         </CModalHeader>
         <CModalBody>
+          <CRow style={{marginBottom:"30px",justifyContent:"center"}}>
+            <SuccessError error={errAddDept} success={successAddDept} />
+          </CRow>
           <CRow>
               <CCol lg="2"></CCol>
               <CCol lg="3">
@@ -46,14 +55,14 @@ const DeptAddModal = (props) =>{
               <CCol lg="2"></CCol>
           </CRow>
           <CButtonToolbar  style={{marginBottom:"30px"}}>
-              <CCol lg="3"></CCol>
-              <CCol lg="3">
+              <CCol lg="4"></CCol>
+              <CCol lg="2">
                 <CButton className="okBtn" onClick={addDeptOk}>Add</CButton>
               </CCol>
-              <CCol lg="3">
+              <CCol lg="2">
                 <CButton className="cancelBtn" onClick={addDeptClose}>Close</CButton>
               </CCol>
-              <CCol lg="3"></CCol> 
+              <CCol lg="4"></CCol> 
           </CButtonToolbar>
         </CModalBody>
       </CModal>
